@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Product Details</title>
+</head>
+<body>
+<center>
+    <h2><u> New Product Details</u></h2>
+<table border="2">
+    <tr>
+        <td> Product ID </td>
+        <td> Shop id </td>
+        <td> category </td>
+        <td> Product Name</td>
+        <td> Quantity </td>
+        <td> Price </td>
+        <td> Image </td>
+        <td> Shop Name </td>
+        <td> Delete </td>
+    </tr>
+    {% for U in userdict %}
+    <tr>
+        <td> {{ U.pid }}</td>
+        <td> {{ U.shopid }}</td>
+        <td> {{ U.category }}</td>
+        <td> {{ U.productname }}</td>
+        <td> {{ U.qty }}</td>
+        <td> {{ U.price }}</td>
+        <td> {{ U.image }}</td>
+        <td> {{ U.shopname }}</td>
+        <td> <a href="{% url 'custreg_del' U.id %}">delete</a></td>
+
+
+
+    </tr>
+    {% endfor %}
+</table>
+</center>
+</body>
+</html>
+

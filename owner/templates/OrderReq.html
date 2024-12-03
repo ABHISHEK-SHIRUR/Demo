@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title> Order request </title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{% static 'index.html' %}">
+            <img src=""{% static 'C:\Users\admin\Pictures\vegetables-shopping-cart-trolley-grocery-logo-icon-design-vector-171090350.jpg' %}" alt="">
+            <span>
+              Grocery Store
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item ">
+                  <a class="nav-link" href="{% static 'index.html' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+               
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% static 'login.html' %}">Login </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+  <!--  Order request section -->
+
+  <section class="login_section layout_padding">
+    <div class="container ">
+      <div class="heading_container">
+        <h2>
+          Order request 
+        </h2>
+        
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form method="POST">
+            {% csrf_token %}
+            
+            <div>
+              <input type="text" name="t1" placeholder="Enter Shop ID"> <br> <br>
+            </div>
+           
+            <div>
+              <input type="text" name="t2" placeholder="Enter Customer ID"> <br> <br>
+            </div>
+            <div>
+              <input type="text" name="t3" placeholder="Enter Personal Name"> <br> <br>
+            </div>
+            <div>
+              <input type="number" name="t4" placeholder="Enter Quantity"> <br> <br>
+            </div>
+            <div>
+              <input type="number" name="t5" placeholder="Enter Unit Price"> <br> <br>
+            </div>
+            <div>
+              <input type="number" name="t6" placeholder="Enter Total"> <br> <br>
+            </div>
+            <div>
+              <input type="number" name="t7" placeholder="Enter GST"> <br> <br>
+            </div>
+            <div>
+              <input type="number" name="t8" placeholder="Enter CGST"> <br> <br>
+            </div>
+            <div>
+              <input type="number" name="t9" placeholder="Enter SGST"> <br> <br>
+            </div>
+            <div>
+              <input type="number" name="t10" placeholder="Enter Grand Total"> <br> <br>
+            </div>
+            <div>
+              <input type="date" name="t11" placeholder="Enter Order Date"> <br> <br>
+            </div>
+            <div>
+              <input type="text" name="t12" placeholder="Enter Order Status"> <br> <br>
+            </div>
+            <div>
+              <input type="text" name="t13" placeholder="Enter Payment Status"> <br> <br>
+            </div>
+            <div>
+              <input type="submit" name="b1" value="Submit "> <br> <br>
+            </div>
+
+            
+          </form>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- end Order Request section -->
+
+
+
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-md-9 mx-auto">
+          <p>
+            &copy; 2019 All Rights Reserved By Mohan Kumar
+            <a href="https://html.design/">Free Html Templates</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+
+</body>
+
+</html>

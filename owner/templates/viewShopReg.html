@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Shop Registration</title>
+</head>
+<body>
+<center>
+    <h2><u> New Shop Registration</u></h2>
+<table border="2">
+    <tr>
+        <td> Shop ID </td>
+        <td> Shop Nmae </td>
+        <td> Cirty </td>
+        <td> Address </td>
+        <td> Conctact No 1 </td>
+        <td> Contact NO 2 </td>
+        <td> Email </td>
+        <td> Status </td>
+        <td> Block Status </td>
+        <td> Delete </td>
+
+    </tr>
+    {% for U in userdict %}
+    <tr>
+        <td> {{ U.shopid }}</td>
+        <td> {{ U.shopname }}</td>
+        <td> {{ U.city }}</td>
+        <td> {{ U.address }}</td>
+        <td> {{ U.contectper }}</td>
+        <td> {{ U.contectno }}</td>
+        <td> {{ U.email }}</td>
+        <td> {{ U.status }}</td>
+        <td> {{ U.block_status }}</td>
+        <td> <a href="{% url 'custreg_del' U.id %}">delete</a></td>
+
+
+
+
+    </tr>
+    {% endfor %}
+</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Customer Registration</title>
+</head>
+<body>
+<center>
+    <h2><u> View Customer Registration</u></h2>
+<table border="2">
+    <tr>
+        <td> Customer ID </td>
+        <td> Name </td>
+        <td> City </td>
+        <td> Pincode </td>
+        <td> Address </td>
+        <td> Contact Number </td>
+        <td> Email </td>
+        <td> Block Status </td>
+        <td> Delete </td>
+
+    </tr>
+    {% for U in userdict %}
+    <tr>
+        <td> {{ U.custid }}</td>
+        <td> {{ U.name }}</td>
+        <td> {{ U.city }}</td>
+        <td> {{ U.pincode }}</td>
+        <td> {{ U.address }}</td>
+        <td> {{ U.contectno }}</td>
+        <td> {{ U.email }}</td>
+        <td> {{ U.block_status }}</td>
+        <td> <a href="{% url 'custreg_del' U.id %}">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</center>
+</body>
+</html>
+

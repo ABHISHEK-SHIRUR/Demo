@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Payment Information</title>
+</head>
+<body>
+<center>
+    <h2> New Payment Information</u></h2>
+    <table border="2">
+        <tr>
+            <td>Shop ID</td>
+            <td>Customer ID</td>
+            <td>Order number</td>
+            <td>Total amount</td>
+            <td>Pay date</td>
+        </tr>
+        {% for u in userdict %}
+
+        <tr>
+            <td>{{ u.shop_id }}</td>
+            <td>{{ u.cust_id }}</td>
+            <td>{{ u.order_no}}</td>
+            <td>{{ u.total_amount }}</td>
+            <td>{{ u.pay_date }}</td>
+
+
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+</body>
+</html>

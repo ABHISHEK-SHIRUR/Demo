@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Order Request</title>
+</head>
+<body>
+<center>
+    <h2> New Order Request</u></h2>
+<table border="2">
+    <tr>
+        <td>Shop ID</td>
+        <td>Customer ID</td>
+        <td>Product Name</td>
+        <td>Quantity</td>
+        <td>Unit Price</td>
+        <td> Total</td>
+        <td> GST</td>
+        <td> CGST </td>
+        <td> SGST </td>
+        <td> Grand Total </td>
+        <td> Order Date </td>
+        <td> Order Status </td>
+        <td> Payment Status </td>
+        <td> Delete </td>
+    </tr>
+    {% for U in userdict %}
+
+    <tr>
+        <td>{{ u.shop_id }}</td>
+        <td>{{ u.cust_id }}</td>
+        <td>{{ u.pname}}</td>
+        <td>{{ u.qty}}</td>
+        <td>{{ u.unit_price}}</td>
+        <td>{{ u.total}}</td>
+        <td>{{ u.gst}}</td>
+        <td>{{ u.gst}}</td>
+        <td>{{ u.cgst}}</td>
+        <td>{{ u.sgst}}</td>
+        <td>{{ u.grandtotal}}</td>
+        <td>{{ u.order_date}}</td>
+        <td>{{ u.order_status}}</td>
+        <td>{{ u.payment_status}}</td>
+        <td> <a href="{% url 'custreg_del' U.id %}">delete</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+    </center>
+</body>
+</html>
